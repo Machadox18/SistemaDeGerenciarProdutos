@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class ProdutoService {
 
@@ -20,5 +21,13 @@ public class ProdutoService {
 
     public void listarProdutos() {
         produtos.forEach(System.out::println);
+    }
+
+    public void listarProdutosCaros(double valor) {
+        List<Produto> caros = produtos.stream()
+                .filter(p -> p.preco() > valor)
+                .collect(Collectors.toList());
+
+        caros.forEach(System.out::println);
     }
 }
