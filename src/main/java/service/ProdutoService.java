@@ -30,4 +30,9 @@ public class ProdutoService {
 
         caros.forEach(System.out::println);
     }
+
+    public void listarCategorias(String categoria) {
+        categorias.getOrDefault(categoria, new ArrayList<>())
+                .forEach(System.out::println);
+    }
 }
