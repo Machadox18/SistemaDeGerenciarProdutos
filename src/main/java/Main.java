@@ -1,4 +1,5 @@
 import model.Produto;
+import repository.Caixa;
 import service.ProdutoService;
 
 public class Main {
@@ -16,5 +17,17 @@ public class Main {
 
         System.out.println("Todos os produtos");
         service.listarProdutos();
+
+        System.out.println("\nProdutos acima de 100:");
+        service.listarProdutosCaros(100);
+
+        System.out.println("\nCategoria Eletrônicos:");
+        service.listarCategorias("Eletrônicos");
+
+        Caixa<Produto> caixa = new Caixa<>();
+        caixa.guardar(p1);
+
+        System.out.println("\nProduto guardado na caixa:");
+        System.out.println(caixa.abrir());
     }
 }
