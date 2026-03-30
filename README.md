@@ -1,1 +1,1 @@
-
+Projeto em Java com foco em conceitos intermediários da linguagem, utilizando Collections (ArrayList e HashMap), Generics, Stream API, Records e organização em camadas com Packages. Desenvolvido para simular um sistema simples de gerenciamento de produtos e reforçar boas práticas de estruturação de código.
