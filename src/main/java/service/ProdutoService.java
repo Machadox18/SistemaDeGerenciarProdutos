@@ -18,4 +18,7 @@ public class ProdutoService {
         categorias.computeIfAbsent(produto.categoria(), k -> new ArrayList<>()).add(produto);
     }
 
+    public void listarProdutos() {
+        produtos.forEach(System.out::println);
+    }
 }
